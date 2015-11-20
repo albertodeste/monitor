@@ -3,11 +3,11 @@
 	"timeout": 30000,
 	"sections": {
 		"First section" : [
-			{"name": "First argument", "script": "echo 1234", "expected": "\\d+"},
-			{"name": "Second argument", "script": "echo test", "expected": "\\d+"}
+			{"name": "First argument", "script": "scripts/php_root 0", "expected": "root"},
+			{"name": "Second argument", "script": "scripts/test.sh", "expected": ".*"}
 		],
 		"Second section" : [
-			{"name": "First argument", "script": "echo 333", "expected": ".*"}
+			{"name": "First argument", "script": "scripts/php_root 1", "expected": "test"}
 		],
 		"Third section" : [
 			{"name": "First argument", "script": "echo 333", "expected": "3+"}
